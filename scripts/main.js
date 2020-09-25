@@ -1,5 +1,5 @@
 function computerPlay() {
-    let choice = Math.round(Math.random() * 10) % 3;
+    let choice = Math.floor(Math.random() * 3);
     switch (choice) {
         case 0:
             return 'rock';
@@ -11,6 +11,8 @@ function computerPlay() {
 }
 function getPlayerChoice () {
     let choice = prompt('Rock, Paper, or Scissors?').toLowerCase();
+    // TODO: Devise data structure to simplify valid choice detection;
+    // TODO: Prevent invalid choice from returning undefined;
     switch (choice) {
         case 'rock':
             return 'rock';
@@ -23,7 +25,8 @@ function getPlayerChoice () {
     }
 }
 function compareChoices (playerChoice, computerChoice) {
-    // TODO: Add more robust error checking; currently invalid input corrupts future data
+    // TODO: Devise programmatic method of camparing choices;
+    // TODO: Add more robust error checking; currently invalid input corrupts future data;
     if (playerChoice == 'rock') {
         switch (computerChoice) {
             case 'rock':
@@ -53,14 +56,14 @@ function compareChoices (playerChoice, computerChoice) {
         }
     }
 }
-
+let debug = true;
 let player_score = 0;
 let cpu_score = 0;
-for (let round = 0; round < 5; round++) {
+for (let round = 1; round <= 5; round++) {
     let cpu = computerPlay();
-    let player = getPlayerChoice();
+    let player = computerPlay();
     let cur_round = compareChoices(player, cpu);
-    console.log(`Round ${round+1}`)
+    console.log(`Round ${round}`)
     console.log(`CPU choice: ${cpu}`)
     console.log(`Player choice: ${player}`)
     switch (cur_round) {
