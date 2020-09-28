@@ -1,0 +1,22 @@
+.body {
+    background: tomato;
+}
+.play-buttons {
+    display: flex;
+    flex: 5;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    justify-content: center;
+  }
+.button {
+    background-color: rgb(179, 67, 179);
+    border: .4rem solid blue;
+    width: 6rem;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.output {
+    background-color: teal;
+    font-family: 'Courier New', Courier, monospace;
+}
