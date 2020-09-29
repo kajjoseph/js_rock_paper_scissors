@@ -30,16 +30,14 @@ function playRound (e) {
     let choices = {0: 'rock', 1: 'paper', 2: 'scissors'};
     let computerChoice = choices[Math.floor(Math.random()*3)];
     let para = document.createElement('p');
-    let newBreak = document.createElement('br');
     let cpuPlay = document.createTextNode(`CPU: ${computerChoice}`);
     let humanPlay = document.createTextNode(`Player: ${playerChoice}`);
     let decision = comparePlays(computerChoice, playerChoice);
     let decisionText = document.createTextNode(`Winner: ${decision}`)
     para.appendChild(cpuPlay);
-    para.appendChild(newBreak);
+    para.appendChild(document.createElement('br'));
     para.appendChild(humanPlay);
     para.appendChild(document.createElement('br'));
     para.appendChild(decisionText);
     output.appendChild(para);
-
 }

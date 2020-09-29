@@ -1,22 +1,37 @@
-.body {
-    background: tomato;
+body {
+    background-color: cornflowerblue;
+}
+main {
+    margin-left: 40%;
+    position: fixed;
+    justify-self: center;
+    width: 330px;
+}
+p {
+    border: 5px purple solid;
+    border-radius: 15px;
 }
 .play-buttons {
     display: flex;
     flex: 5;
     font-family: 'Courier New', Courier, monospace;
     align-items: center;
-    justify-content: center;
+    justify-content: center;   
   }
 .button {
-    background-color: rgb(179, 67, 179);
-    border: .4rem solid blue;
+    background-color: plum;
+    border: 5px solid blue;
+    word-wrap: normal;
     width: 6rem;
     padding: 5px;
     text-align: center;
     cursor: pointer;
+    border-radius: 50px 50px 0px 0px;
 }
 .output {
+    text-align: center;
+    border: 5px purple solid;
     background-color: teal;
     font-family: 'Courier New', Courier, monospace;
+    border-radius: 0px 0px 50px 50px;
 }
